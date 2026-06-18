@@ -20,7 +20,6 @@ body, html {
 ::-webkit-scrollbar-track { background: #292b23; }
 ::-webkit-scrollbar-thumb { background: #aea98d; border-radius: 10px; }
 
-
 .logo-home-btn {
     position: fixed;
     top: 2.9vh;  
@@ -38,7 +37,6 @@ body, html {
 .logo-home-btn:hover {
     opacity: 0.7;
 }
-
 
 .archive-container {
     writing-mode: vertical-rl;
@@ -87,10 +85,12 @@ body, html {
     line-height: 1.6;
     letter-spacing: 1px;
 }
+
 .hangul-name {
     font-size: 7vh;
     letter-spacing: 2vh;
     margin-bottom: 2vh; 
+    white-space: nowrap; 
 }
 
 .intro-column p {

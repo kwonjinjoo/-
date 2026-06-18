@@ -16,11 +16,9 @@ body, html {
     overflow-x: auto; 
 }
 
-
 ::-webkit-scrollbar { height: 8px; }
 ::-webkit-scrollbar-track { background: #272328; }
 ::-webkit-scrollbar-thumb { background: #828174; border-radius: 10px; }
-
 
 .logo-home-btn {
     position: fixed;
@@ -40,7 +38,6 @@ body, html {
     opacity: 0.7;
 }
 
-
 .archive-container {
     writing-mode: vertical-rl; 
     height: 100vh;
@@ -52,7 +49,6 @@ body, html {
     width: max-content;
 }
 
-
 .num {
     display: inline-block;
     -webkit-text-orientation: upright;
@@ -60,7 +56,6 @@ body, html {
     font-style: normal;
     text-align: center;
 }
-
 
 .symbol {
     font-family: 'Gungsuh', '궁서', serif;
@@ -90,10 +85,12 @@ body, html {
     line-height: 1.6;
     letter-spacing: 1px;
 }
+
 .hangul-name {
     font-size: 7vh;
     letter-spacing: 2vh;
     margin-bottom: 2vh; 
+    white-space: nowrap; 
 }
 
 .intro-column p {
@@ -135,12 +132,11 @@ body, html {
     font-weight: bold;
 }
 
-
 .credits-column {
     display: flex;
     flex-direction: column; 
     align-items: flex-end;
-    margin-top: auto;   
+    margin-top: auto;    
     padding-top: 5vh;
     border: none;
 }
