@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -23,17 +22,52 @@ body, html {
 ::-webkit-scrollbar-thumb { background: #f4f0e3; border-radius: 10px; }
 
 
+.logo-home-btn {
+    position: fixed;
+    top: 2.9vh;
+    left: 2vw;
+    width: 85px; 
+    height: auto;  
+    z-index: 1000;
+    transition: opacity 0.2s ease;
+}
+.logo-home-btn img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.logo-home-btn:hover {
+    opacity: 0.7;
+}
+
+
 .archive-container {
     writing-mode: vertical-rl;
     height: 100vh;
-    padding: 8vh 5vw; 
+    padding: 12vh 2vw 4vh 15vw; 
     display: flex;
     flex-direction: column; 
     align-items: flex-start; 
     gap: 3vw; 
+    width: max-content;
 }
 
 
+.num {
+    text-orientation: upright;
+    -webkit-text-orientation: upright;
+    display: inline-block;
+    font-style: normal;
+    letter-spacing: -1px; 
+}
+
+
+.symbol {
+    font-family: 'Gungsuh', '궁서', serif;
+    display: inline-block;
+    line-height: 1;
+    font-style: normal;
+}
 
 .hanja-column {
     height: 84vh;
@@ -44,7 +78,6 @@ body, html {
     font-weight: bold;
     line-height: 1;
 }
-
 
 .sub-column {
     height: 84vh;
@@ -63,13 +96,11 @@ body, html {
     margin-bottom: 2vh; 
 }
 
-
 .intro-column p {
     font-size: 2.2vh; 
     line-height: 2.4;
     text-align: justify;
 }
-
 
 .img-column {
     margin-left: 2vw;
@@ -80,7 +111,6 @@ body, html {
     object-fit: cover;
     filter: sepia(20%) grayscale(30%); 
 }
-
 
 .section-block {
     display: flex;
@@ -104,15 +134,15 @@ body, html {
     font-weight: bold;
 }
 
-
 .credits-column {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     align-items: flex-end; 
-    margin-left: 6vw; 
+    margin-top: auto; 
+    padding-top: 5vh;
 }
 .credits-column p {
     font-size: 1.4vh;
-    margin-right: 1.5vw;
     opacity: 0.8; 
+    line-height: 1.8;
 }

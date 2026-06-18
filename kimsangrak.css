@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -17,22 +16,55 @@ body, html {
     overflow-x: auto; 
 }
 
-
 ::-webkit-scrollbar { height: 8px; }
 ::-webkit-scrollbar-track { background: #292b23; }
 ::-webkit-scrollbar-thumb { background: #aea98d; border-radius: 10px; }
 
 
+.logo-home-btn {
+    position: fixed;
+    top: 2.9vh;  
+    left: 2vw;  
+    width: 85px; 
+    height: auto;  
+    z-index: 1000;
+    transition: opacity 0.2s ease;
+}
+.logo-home-btn img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.logo-home-btn:hover {
+    opacity: 0.7;
+}
+
+
 .archive-container {
     writing-mode: vertical-rl;
     height: 100vh;
-    padding: 8vh 5vw; 
+    padding: 12vh 2vw 4vh 15vw; 
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     align-items: flex-start; 
     gap: 2.5vw; 
+    width: max-content;
 }
 
+.num {
+    text-orientation: upright;
+    -webkit-text-orientation: upright;
+    display: inline-block;
+    font-style: normal;
+    letter-spacing: -2px; 
+}
+
+.symbol {
+    font-family: 'Gungsuh', '궁서', serif;
+    display: inline-block;
+    line-height: 1;
+    font-style: normal;
+}
 
 .hanja-column {
     height: 84vh;
@@ -43,7 +75,6 @@ body, html {
     font-weight: bold;
     line-height: 1;
 }
-
 
 .sub-column {
     height: 84vh;
@@ -62,13 +93,11 @@ body, html {
     margin-bottom: 2vh; 
 }
 
-
 .intro-column p {
     font-size: 1.8vh;
     line-height: 2.2;
     text-align: justify; 
 }
-
 
 .img-column {
     margin-left: 2vw; 
@@ -80,14 +109,13 @@ body, html {
     filter: sepia(30%) grayscale(20%); 
 }
 
-
 .section-block {
     display: flex;
     flex-direction: column; 
     border-left: 1px solid rgba(174, 169, 141, 0.4); 
     padding-left: 2vw;
     margin-left: 1.5vw;
-    gap: 1.5vw; /
+    gap: 1.5vw; 
 }
 .section-block h2 {
     font-size: 2.3vh;
@@ -102,15 +130,15 @@ body, html {
     margin-top: 3vh; 
 }
 
-
 .credits-column {
     display: flex;
     flex-direction: column; 
-    align-items: flex-end; /
-    margin-left: 6vw; 
+    align-items: flex-end; 
+    margin-top: auto; 
+    padding-top: 5vh;
 }
 .credits-column p {
     font-size: 1.4vh;
-    margin-right: 1.5vw; 
-    opacity: 0.8; 
+    opacity: 0.6; 
+    line-height: 1.8;
 }
