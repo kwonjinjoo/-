@@ -10,18 +10,22 @@
 </head>
 <body>
     <a href="index.html" class="logo-home-btn" title="홈으로 이동">
-        <img src="logo1.png" alt="월간디자인 로고">
+        <img src="logo3.png" alt="월간디자인 로고">
     </a>
 
     <main class="archive-container">
 
-        <div class="column hanja-column">
-            <span>金</span><span>相</span><span>洛</span>
+        <div class="column name-column">
+            <div class="hangul-title">
+                <span>김</span><span>상</span><span>락</span>
+            </div>
+            <div class="hanja-title">
+                <span>金</span><span>相</span><span>洛</span>
+            </div>
         </div>
 
         <div class="column sub-column">
-            <p class="subtitle">충청남도발전연구원에<br><span class="symbol">﹁</span>산업디자인부<span class="symbol">﹂</span> 설치를 제안한 김상락 교수</p>
-            <p class="hangul-name">김상락</p>
+            <p class="subtitle">충청남도발전연구원에<br><span class="symbol">﹁</span>산업디자인부<span class="symbol">﹂</span> 설치를 제안한 교수</p>
         </div>
 
         <div class="column intro-column">
@@ -41,7 +45,7 @@
         <div class="section-block">
             <h2><span class="num">2</span> 디자인 사각지대를 허물다</h2>
             <p>다음은 디자인 사각지대였던 시·도 행정부문의 디자인 지도<span class="symbol">︑</span> 각종 보고서나 홍보물<span class="symbol">︑</span> 시·군의 농수산물 포장 등을 디자인해주는 것이다<span class="symbol">︒</span> 더불어 공무원 연수교육을 실시하고 시민 참여 디자인 공모전을 개최함으로써 도민(道民)을 대상으로 디자인 의식개혁에 힘쓴다는 생각이다<span class="symbol">︒</span></p>
-            <p class="quote"><span class="symbol">﹃</span>디자인도 일종의 서비스업이죠<span class="symbol">︒</span> 그러나 단순한 심부름센터로 전락할 것이냐<span class="symbol">︑</span> 컨설팅을 하는 법률사무소 형태가 될 것이냐는 우리가 하기기에 달려 있습니다<span class="symbol">︒</span> 단순히 정부 일거리를 맡아서 일시적으로 돈을 버는 것이 아니라 정부와 공무원<span class="symbol">︑</span> 나아가 시민들에게 디자인 인식을 심어주어 지속적인 관계를 갖는 게 무엇보다 중요합니다<span class="symbol">︒﹄</span></p>
+            <p class="quote"><span class="symbol">﹃</span>디자인도 일종의 service업이죠<span class="symbol">︒</span> 그러나 단순한 심부름센터로 전락할 것이냐<span class="symbol">︑</span> 컨설팅을 하는 법률사무소 형태가 될 것이냐는 우리가 하기기에 달려 있습니다<span class="symbol">︒</span> 단순히 정부 일거리를 맡아서 일시적으로 돈을 버는 것이 아니라 정부와 공무원<span class="symbol">︑</span> 나아가 시민들에게 디자인 인식을 심어주어 지속적인 관계를 갖는 게 무엇보다 중요합니다<span class="symbol">︒﹄</span></p>
         </div>
 
         <div class="section-block">
@@ -61,11 +65,11 @@
 
     <script>
     window.onload = function() {
-        var target = document.querySelector('.hanja-column');
+        var target = document.querySelector('.name-column');
         if (target) {
             document.body.scrollLeft = target.offsetLeft;
         }
     };
-</script>
+    </script>
 </body>
 </html>

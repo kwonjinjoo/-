@@ -9,16 +9,16 @@
 body, html {
     width: 100%;
     height: 100vh;
-    background-color: #bdbfb4; 
-    color: #414141; 
+    background-color: #737164; 
+    color: #f4f0e3; 
     font-family: 'Gungsuh', '궁서', 'Batang', '바탕', serif;
     overflow-y: hidden; 
     overflow-x: auto; 
 }
 
 ::-webkit-scrollbar { height: 8px; }
-::-webkit-scrollbar-track { background: #bdbfb4; }
-::-webkit-scrollbar-thumb { background: #414141; border-radius: 10px; }
+::-webkit-scrollbar-track { background: #737164; }
+::-webkit-scrollbar-thumb { background: #f4f0e3; border-radius: 10px; }
 
 .logo-home-btn {
     position: fixed;
@@ -44,6 +44,7 @@ body, html {
     padding: 12vh 2vw 4vh 15vw; 
     display: flex;
     flex-direction: column; 
+    /* 상단 라인을 모두 일직선으로 맞추는 핵심 속성 */
     align-items: flex-start; 
     gap: 3vw; 
     width: max-content;
@@ -64,31 +65,50 @@ body, html {
     font-style: normal;
 }
 
-.hanja-column {
-    height: 84vh; 
+/* --- 큰 한글 이름과 나란히 서는 세로쓰기 한자 레이아웃 --- */
+.name-column {
+    display: flex;
+    flex-direction: column; 
+    height: 84vh;
+    gap: 1vw;
+    margin-top: 0; /* 윗선 정렬용 여백 초기화 */
+}
+
+.hangul-title {
     display: flex;
     flex-direction: row; 
     justify-content: space-between; 
-    font-size: 16vh;
+    font-size: 16vh; 
     font-weight: bold;
     line-height: 1;
+    height: 100%;
 }
 
+.hanja-title {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    font-size: 8vh; 
+    font-weight: normal;
+    line-height: 1;
+    opacity: 0.8;
+    height: 100%;
+    padding-top: 1.5vh; 
+}
+
+/* --- 소제목 --- */
 .sub-column {
     height: 84vh;
     display: flex;
     flex-direction: row; 
     justify-content: space-between; 
+    margin-top: 0; 
 }
 .subtitle {
     font-size: 2vh;
     line-height: 1.6;
     letter-spacing: 1px;
-}
-.hangul-name {
-    font-size: 7vh;
-    letter-spacing: 2vh;
-    margin-bottom: 2vh; 
+    margin-top: 0;
 }
 
 .intro-column p {
@@ -96,42 +116,57 @@ body, html {
     line-height: 2.4;
     text-align: justify;
     word-break: keep-all; 
+    margin-top: 0; /* 윗선 정렬 */
 }
 
 .img-column {
     margin-left: 2vw; 
+    margin-top: 0; /* 사진도 윗선 정렬 */
 }
 .img-column img {
     height: 38vh; 
     width: auto;
     object-fit: cover;
     filter: sepia(15%) grayscale(25%); 
+    display: block;
 }
 
+/* --- 질문/답변 블록 (윗선 완벽 정렬) --- */
 .section-block {
     display: flex;
     flex-direction: column; 
-    border-left: 1px solid rgba(65, 65, 65, 0.3);
+    border-left: 1px solid rgba(244, 240, 227, 0.3);
     padding-left: 2vw;
     margin-left: 1vw;
     gap: 1.5vw; 
+    margin-top: 0; /* 블록 자체의 윗여백 초기화 */
 }
+
+/* 중제목(H2) 크기 약간 확대 및 윗선 여백 제거 */
 .section-block h2 {
-    font-size: 2.1vh;
+    font-size: 2.9vh; /* 2.7vh -> 2.9vh로 확대하여 본문과 대비감 극대화 */
     font-weight: bold;
     letter-spacing: 1px;
-    margin-bottom: 1vh;
+    margin-top: 0; /* 첫 줄 어긋남 원인 완전 제거 */
+    margin-bottom: 0;
 }
+
+/* 답변 문단 */
 .section-block p {
-    font-size: 1.8vh;
+    font-size: 1.8vh; /* 답변은 기존 크기 유지 */
     line-height: 2.2;
     text-align: justify;
     word-break: keep-all; 
+    margin-top: 0; /* 문단 상단 여백 제거 */
 }
+
+/* 질문(Q) 클래스 텍스트 크기 눈에 띄게 확대 */
 .section-block .question {
-    margin-top: 2vh; 
+    font-size: 2.1vh; /* 1.8vh -> 2.1vh로 확대 (답변보다 확실히 큼) */
     font-weight: bold;
+    margin-top: 0;
 }
+
 .section-block strong {
     font-weight: bold;
 }

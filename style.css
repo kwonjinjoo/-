@@ -9,36 +9,42 @@ body, html {
     height: 100%;
     overflow: hidden;
     font-family: '궁서', 'Gungsuh', serif;
+    display: flex;
+    flex-direction: column; 
 }
 
-.main-title {
-    position: absolute;
-    top: 3vh; 
-    left: 2vw;
-    color: #aea98d;
-    font-size: 1.05vw; 
-    line-height: 1.5; 
+/* 1. 상단 흰색 띠 두께 조절 (6vh -> 4.5vh로 변경) */
+.top-bar {
+    width: 100%;
+    height: 4.5vh; 
+    min-height: 35px;
+    background-color: #ffffff;
+    color: #292b23;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    font-size: 1rem; /* 띠가 얇아진 만큼 글자 크기도 살짝 조절 */
+    font-weight: bold;
     letter-spacing: 1px;
     z-index: 10;
-    pointer-events: none;
-    word-break: keep-all;
 }
 
 .archive {
     display: flex;
     width: 100vw;
-    height: 100vh;
+    flex: 1; 
 }
 
 .person {
     flex: 1;
     display: flex;
-    justify-content: flex-end; 
-    align-items: flex-end; 
+    justify-content: center; 
+    align-items: center; 
     text-decoration: none;
-    
-    padding: 0 1.2vw 4vh 0; 
     transition: all 0.3s ease;
+    
+    /* 2. 큰 이름들을 아주 조금만 아래로 내리기 위해 여백 추가 */
+    padding-top: 3vh; 
 }
 
 .text-box {
@@ -47,23 +53,25 @@ body, html {
     justify-content: space-between; 
     align-items: center;
     
-    height: 88%;
+    height: 78%; /* 조금 더 안정적인 비율을 위해 살짝 조절 */
     font-weight: bold;
     font-size: 10vw; 
     line-height: 1;
 }
 
-.hangul {
+/* 첫 화면 한글, 호버 시 한자로 변경 */
+.hanja {
     display: none; 
 }
 
-.person:hover .hanja {
+.person:hover .hangul {
     display: none; 
 }
-.person:hover .hangul {
+.person:hover .hanja {
     display: flex; 
 }
 
+/* 배경색 및 글자색 유지 */
 .col-1 { background-color: #292b23; color: #aea98d; }
 .col-2 { background-color: #737164; color: #f4f0e3; }
 .col-3 { background-color: #d6dbc5; color: #262328; }
@@ -71,18 +79,17 @@ body, html {
 .col-5 { background-color: #272328; color: #828174; }
 
 @media (max-width: 768px) {
-
-    .main-title {
-        font-size: 3vw;
-        top: 2vh;
-        left: 3vw;
+    .top-bar {
+        font-size: 0.85rem;
+        height: 40px;
     }
     
     .text-box {
         font-size: 15vw;
-        height: 90%; 
+        height: 85%; 
     }
+    
     .person {
-        padding: 0 1.5vw 3vh 0; 
+        padding-top: 2vh;
     }
 }

@@ -9,16 +9,17 @@
 body, html {
     width: 100%;
     height: 100vh; 
-    background-color: #272328; 
-    color: #828174; 
+    /* 요청하신 다크 배경과 베이지톤 글자색 적용 */
+    background-color: #292b23; 
+    color: #aea98d; 
     font-family: 'Gungsuh', '궁서', 'Batang', '바탕', serif;
     overflow-y: hidden;
     overflow-x: auto; 
 }
 
 ::-webkit-scrollbar { height: 8px; }
-::-webkit-scrollbar-track { background: #272328; }
-::-webkit-scrollbar-thumb { background: #828174; border-radius: 10px; }
+::-webkit-scrollbar-track { background: #292b23; }
+::-webkit-scrollbar-thumb { background: #aea98d; border-radius: 10px; }
 
 .logo-home-btn {
     position: fixed;
@@ -64,16 +65,37 @@ body, html {
     font-style: normal;
 }
 
-.hanja-column {
-    height: 84vh; 
+/* --- 큰 한글 이름과 나란히 서는 한자 레이아웃 --- */
+.name-column {
     display: flex;
-    flex-direction: row; 
-    justify-content: space-between; 
-    font-size: 16vh;
-    font-weight: bold;
-    line-height: 1;
+    flex-direction: column; /* 세로쓰기 환경에서 축 정렬 */
+    height: 84vh;
+    gap: 1vw;
 }
 
+.hangul-title {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    font-size: 16vh; /* 한글 크게 */
+    font-weight: bold;
+    line-height: 1;
+    height: 100%;
+}
+
+.hanja-title {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    font-size: 8vh; /* 한자 작게 */
+    font-weight: normal;
+    line-height: 1;
+    opacity: 0.8;
+    height: 100%;
+    padding-top: 1.5vh; /* 첫 글자 높이 맞춤 */
+}
+
+/* --- 소제목 --- */
 .sub-column {
     height: 84vh;
     display: flex;
@@ -84,13 +106,6 @@ body, html {
     font-size: 2vh;
     line-height: 1.6;
     letter-spacing: 1px;
-}
-
-.hangul-name {
-    font-size: 7vh;
-    letter-spacing: 2vh;
-    margin-bottom: 2vh; 
-    white-space: nowrap; 
 }
 
 .intro-column p {
@@ -110,23 +125,32 @@ body, html {
     filter: sepia(20%) grayscale(30%);
 }
 
+/* --- 질문/답변 블록 (윗선 완벽 정렬) --- */
 .section-block {
     display: flex;
     flex-direction: column; 
-    border-left: 1px solid rgba(130, 129, 116, 0.3);
+    /* 선 색상도 글자색 톤에 맞춤 */
+    border-left: 1px solid rgba(174, 169, 141, 0.3);
     padding-left: 2vw;
     margin-left: 1vw;
     gap: 1.5vw; 
 }
+
+/* 질문 서식 h2 통일 및 윗선 여백 제거 */
+.section-block h2 {
+    font-size: 2.7vh; /* 다른 교수님 페이지와 동일하게 사이즈업 */
+    font-weight: bold;
+    word-break: keep-all;
+    letter-spacing: 1px;
+    margin-top: 0; /* 윗선을 어긋나게 하던 범인 검거 및 제거! */
+}
+
 .section-block p {
     font-size: 1.8vh;
     line-height: 2.2;
     text-align: justify;
     word-break: keep-all;
-}
-.section-block .question {
-    margin-top: 2vh;
-    font-weight: bold;
+    margin-top: 0; /* 모든 문단의 시작점 통일 */
 }
 .section-block strong {
     font-weight: bold;

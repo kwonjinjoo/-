@@ -9,23 +9,24 @@
 body, html {
     width: 100%;
     height: 100vh; 
-    background-color: #292b23; 
-    color: #aea98d; 
+    /* 요청하신 대조적인 밝은 올리브 톤 배경 및 차분한 먹색 글자색 적용 */
+    background-color: #d6dbc5; 
+    color: #262328; 
     font-family: 'Gungsuh', '궁서', 'Batang', '바탕', serif;
     overflow-y: hidden; 
     overflow-x: auto; 
 }
 
 ::-webkit-scrollbar { height: 8px; }
-::-webkit-scrollbar-track { background: #292b23; }
-::-webkit-scrollbar-thumb { background: #aea98d; border-radius: 10px; }
+::-webkit-scrollbar-track { background: #d6dbc5; }
+::-webkit-scrollbar-thumb { background: #262328; border-radius: 10px; }
 
 .logo-home-btn {
     position: fixed;
-    top: 2.9vh;  
-    left: 2vw;  
+    top: 2.9vh; 
+    left: 2vw; 
     width: 85px; 
-    height: auto;  
+    height: auto; 
     z-index: 1000;
     transition: opacity 0.2s ease;
 }
@@ -64,33 +65,47 @@ body, html {
     font-style: normal;
 }
 
-.hanja-column {
-    height: 84vh;
+/* --- 큰 한글 이름과 나란히 서는 한자 레이아웃 (세로쓰기 버그 완벽 수정본) --- */
+.name-column {
     display: flex;
-    flex-direction: row; 
-    justify-content: space-between;
-    font-size: 16vh;
-    font-weight: bold;
-    line-height: 1;
+    flex-direction: column; /* 세로쓰기 모드에서 줄과 줄을 우측에서 좌측으로 나열 */
+    height: 84vh;
+    gap: 1vw;
 }
 
+.hangul-title {
+    display: flex;
+    flex-direction: row; /* 세로쓰기 모드에서 위에서 아래로 정렬 */
+    justify-content: space-between;
+    font-size: 16vh; /* 크게 키운 한글 이름 */
+    font-weight: bold;
+    line-height: 1;
+    height: 100%;
+}
+
+.hanja-title {
+    display: flex;
+    flex-direction: row; /* 위에서 아래로 정렬 */
+    justify-content: space-between;
+    font-size: 8vh; /* 한글의 절반 크기로 작게 조절 */
+    font-weight: normal;
+    line-height: 1;
+    opacity: 0.8;
+    height: 100%;
+    padding-top: 1.5vh; /* 첫 글자 높이 밸런스 조정 */
+}
+
+/* --- 소제목 --- */
 .sub-column {
     height: 84vh;
     display: flex;
     flex-direction: row; 
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 .subtitle {
     font-size: 2vh;
     line-height: 1.6;
     letter-spacing: 1px;
-}
-
-.hangul-name {
-    font-size: 7vh;
-    letter-spacing: 2vh;
-    margin-bottom: 2vh; 
-    white-space: nowrap; 
 }
 
 .intro-column p {
@@ -112,7 +127,7 @@ body, html {
 .section-block {
     display: flex;
     flex-direction: column; 
-    border-left: 1px solid rgba(174, 169, 141, 0.4); 
+    border-left: 1px solid rgba(38, 35, 40, 0.4); /* 본문 글자색 톤에 맞춘 가로 구분선 */
     padding-left: 2vw;
     margin-left: 1.5vw;
     gap: 1.5vw; 
