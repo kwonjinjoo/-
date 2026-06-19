@@ -9,7 +9,7 @@
 body, html {
     width: 100%;
     height: 100vh; 
-    /* 요청하신 대조적인 밝은 올리브 톤 배경 및 차분한 먹색 글자색 적용 */
+
     background-color: #d6dbc5; 
     color: #262328; 
     font-family: 'Gungsuh', '궁서', 'Batang', '바탕', serif;
@@ -65,19 +65,19 @@ body, html {
     font-style: normal;
 }
 
-/* --- 큰 한글 이름과 나란히 서는 한자 레이아웃 (세로쓰기 버그 완벽 수정본) --- */
+
 .name-column {
     display: flex;
-    flex-direction: column; /* 세로쓰기 모드에서 줄과 줄을 우측에서 좌측으로 나열 */
+    flex-direction: column; 
     height: 84vh;
     gap: 1vw;
 }
 
 .hangul-title {
     display: flex;
-    flex-direction: row; /* 세로쓰기 모드에서 위에서 아래로 정렬 */
+    flex-direction: row; 
     justify-content: space-between;
-    font-size: 16vh; /* 크게 키운 한글 이름 */
+    font-size: 16vh; 
     font-weight: bold;
     line-height: 1;
     height: 100%;
@@ -85,17 +85,17 @@ body, html {
 
 .hanja-title {
     display: flex;
-    flex-direction: row; /* 위에서 아래로 정렬 */
+    flex-direction: row;
     justify-content: space-between;
-    font-size: 8vh; /* 한글의 절반 크기로 작게 조절 */
+    font-size: 8vh;
     font-weight: normal;
     line-height: 1;
     opacity: 0.8;
     height: 100%;
-    padding-top: 1.5vh; /* 첫 글자 높이 밸런스 조정 */
+    padding-top: 1.5vh; 
 }
 
-/* --- 소제목 --- */
+
 .sub-column {
     height: 84vh;
     display: flex;

@@ -13,7 +13,7 @@ body, html {
     flex-direction: column; 
 }
 
-/* 1. 상단 흰색 띠 두께 조절 (6vh -> 4.5vh로 변경) */
+
 .top-bar {
     width: 100%;
     height: 4.5vh; 
@@ -23,7 +23,7 @@ body, html {
     display: flex;
     justify-content: center; 
     align-items: center;     
-    font-size: 1rem; /* 띠가 얇아진 만큼 글자 크기도 살짝 조절 */
+    font-size: 1rem; 
     font-weight: bold;
     letter-spacing: 1px;
     z-index: 10;
@@ -43,7 +43,6 @@ body, html {
     text-decoration: none;
     transition: all 0.3s ease;
     
-    /* 2. 큰 이름들을 아주 조금만 아래로 내리기 위해 여백 추가 */
     padding-top: 3vh; 
 }
 
@@ -53,13 +52,13 @@ body, html {
     justify-content: space-between; 
     align-items: center;
     
-    height: 78%; /* 조금 더 안정적인 비율을 위해 살짝 조절 */
+    height: 78%; 
     font-weight: bold;
     font-size: 10vw; 
     line-height: 1;
 }
 
-/* 첫 화면 한글, 호버 시 한자로 변경 */
+
 .hanja {
     display: none; 
 }
@@ -71,7 +70,7 @@ body, html {
     display: flex; 
 }
 
-/* 배경색 및 글자색 유지 */
+
 .col-1 { background-color: #292b23; color: #aea98d; }
 .col-2 { background-color: #737164; color: #f4f0e3; }
 .col-3 { background-color: #d6dbc5; color: #262328; }
